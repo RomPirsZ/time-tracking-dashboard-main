@@ -13,6 +13,12 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -21,124 +27,171 @@
     />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <main>
       <section class="mainCard">
         <div class="perfilCard">
           <div class="perfil">
-            <img src="/images/image-jeremy.png" alt="Profile picture" />
-            Report for
+            <img
+              class="profilePicture"
+              src="./images/image-jeremy.png"
+              alt="Profile picture"
+            />
+            <p>Report for</p>
             <h1>Jeremy Robson</h1>
           </div>
-          <nav>Daily Weekly Monthly</nav>
         </div>
-      </section>
-      
-      <section class="activities">
-        <article class="work">
-          <h2>Work</h2>
-          5hrs
-          <!-- daily -->
-          Previous - 7hrs
-          <!-- daily -->
-          32hrs
-          <!-- weekly -->
-          Previous - 36hrs
-          <!-- weekly -->
-          103hrs
-          <!-- monthly -->
-          Previous - 128hrs
-          <!-- monthly -->
-        </article>
-        <article class="play">
-          <h2>Play</h2>
-          1hr
-          <!-- daily -->
-          Previous - 2hrs
-          <!-- daily -->
-          10hrs
-          <!-- weekly -->
-          Previous - 8hrs
-          <!-- weekly -->
-          23hrs
-          <!-- monthly -->
-          Previous - 29hrs
-          <!-- monthly -->
-        </article>
-        <article class="study">
-          <h2>Study</h2>
-          0hrs
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          4hrs
-          <!-- weekly -->
-          Previous - 7hrs
-          <!-- weekly -->
-          13hrs
-          <!-- monthly -->
-          Previous - 19hrs
-          <!-- monthly -->
-        </article>
-        <article class="exercise">
-          <h2>Exercise</h2>
-          1hr
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          4hrs
-          <!-- weekly -->
-          Previous - 5hrs
-          <!-- weekly -->
-          11hrs
-          <!-- monthly -->
-          Previous - 18hrs
-          <!-- monthly -->
-        </article>
-        <article class="social">
-          <h2>Social</h2>
-          1hr
-          <!-- daily -->
-          Previous - 3hrs
-          <!-- daily -->
-          5hrs
-          <!-- weekly -->
-          Previous - 10hrs
-          <!-- weekly -->
-          21hrs
-          <!-- monthly -->
-          Previous - 23hrs
-          <!-- monthly -->
-        </article>
-        <article class="selfCare">
-          <h2>Self Care</h2>
-          <p class="cardTime">0hrs</p>
-          <!-- daily -->
-          Previous - 1hr
-          <!-- daily -->
-          2hrs
-          <!-- weekly -->
-          Previous - 2hrs
-          <!-- weekly -->
-          7hrs
-          <!-- monthly -->
-          Previous - 11hrs
-          <!-- monthly -->
-        </article>
+        <nav>
+          <button>Daily</button>
+          <button>Weekly</button>
+          <button>Monthly</button>
+        </nav>
       </section>
 
-      <div class="attribution">
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          rel="noopener"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
+      <!-- All activities cards 🧷 -->
+      <!-- Work 👷‍♂️ -->
+      <section class="activities">
+        <article class="work">
+          <div class="info">
+            <div class="header-card">
+              <h2>Work</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <!-- weekly -->
+              <p class="current-hours">
+                <time datetime="PT32H">32hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PT36H">Last Week - 36hrs</time>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Play 👾 -->
+        <article class="play">
+          <div class="info">
+            <div class="header-card">
+              <h2>Play</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <!-- weekly -->
+              <p class="current-hours">
+                <time datetime="PT23H">10hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PH8H">Last Week - 8hrs</time>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study 👩‍🎓 -->
+        <article class="study">
+          <div class="info">
+            <div class="header-card">
+              <h2>Study</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <!-- weekly -->
+              <p class="current-hours">
+                <time datetime="PH13H">4hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PH7H">Last Week - 7hrs</time>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Exercise 🏋️‍♂️ -->
+        <article class="exercise">
+          <div class="info">
+            <div class="header-card">
+              <h2>Exercise</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <p class="current-hours">
+                <time datetime="PH4H">4hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PH5H">Last Week - 5hrs</time>
+              </p>
+              <!-- weekly -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Social 😀 -->
+        <article class="social">
+          <div class="info">
+            <div class="header-card">
+              <h2>Social</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <p class="current-hours">
+                <time datetime="PH5H">5hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PH10H">Last Week - 10hrs</time>
+              </p>
+              <!-- weekly -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Selfcare 🥗 -->
+        <article class="selfCare">
+          <div class="info">
+            <div class="header-card">
+              <h2>Self Care</h2>
+              <button class="dots">
+                <img src="./images/icon-ellipsis.svg" alt="dots" />
+              </button>
+            </div>
+            <div class="hours-container">
+              <p class="current-hours">
+                <time datetime="PH2H">2hrs</time>
+              </p>
+              <!-- weekly -->
+              <p class="previous-hours">
+                <time datetime="PH2H">Last Week - 2hrs</time>
+              </p>
+              <!-- weekly -->
+            </div>
+          </div>
+        </article>
+      </section>
     </main>
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        rel="noopener"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Carlos Ali</a>.
+    </div>
   </body>
 </html>

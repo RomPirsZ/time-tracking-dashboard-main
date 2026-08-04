@@ -1,40 +1,299 @@
+/* ((((((((((((((((((((((((( Global Styles ))))))))))))))))))))))) */
 * {
     margin: 0;
     padding: 0;
-    font-size: 18px;
-    font-family: "Hanken Grotesk", sans-serif;
+    font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     box-sizing: border-box;
     color: #FFFFFF;
 }
+
 body {
     background: hsl(226, 43%, 10%);
     display: grid;
     place-items: center;
     min-height: 100vh;
-    padding: 15vh
+    padding: 8vh;
+    font-size: 18px;
 }
+
 main {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: .95fr 3fr;
     gap: 5vh;
 }
-/* ----------------------- Tarjeta del perfil de usuarui ----------------------- */
+
+/* ----------------------- User Profile Card ----------------------- */
 
 .mainCard {
-    background: red;
-    width: 300px;
-    height: 300px;
-    display: grid;
-    grid-template-columns: 2fr
+    background: hsl(235, 46%, 20%);
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 2fr;
+    border-radius: 12px;
 }
 
-/* ----------------------- Tarjeta de actividades ----------------------- */
+.perfilCard {
+    background: hsl(246, 80%, 60%);
+    border-radius: 12px;
+    padding: 30px;
+    display: grid;
+    height: 20rem;
+}
+
+.perfil {
+    grid-template-rows: auto auto;
+}
+
+.profilePicture {
+    width: 4.8rem;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.perfil p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 35px;
+    color: hsl(236, 81%, 84%);
+}
+
+h1 {
+    margin-top: 2px;
+}
+
+.mainCard nav {
+    display: grid;
+    gap: 18px;
+    justify-items: left;
+    padding: 30px;
+}
+
+button {
+    background: none;
+    color: hsl(235, 45%, 61%);
+    border: none;
+    padding: none;
+    font-weight: 380;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color .2s ease 0s;
+}
+
+button:hover {
+    color: hsl(0, 0%, 100%);
+}
+
+/* ----------------------- Activities Card ----------------------- */
 
 .activities {
-    background: blue;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 4vh;
+}
+
+.activities article {
+    border-radius: 14px;
+    padding-top: 40px;
+}
+
+.info {
+    padding: 25px;
+    background: hsl(235, 46%, 20%);
+    grid-template-rows: auto auto;
+    border-radius: 14px;
+    height: 100%;
+    display: grid;
+    row-gap: 3vh;
+    transition: background .2s ease 0s;
+}
+
+.info:not(:has(.dots:hover)):hover {
+    background: hsl(235, 40%, 44%);
+}
+
+.header-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.dots {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 1.5rem;
+}
+
+button .dots {
+    transition: filter .3s ease 0s;
+}
+
+.dots:hover {
+    filter: brightness(175%);
+}
+
+.hours-container {
+    display: grid;
+    gap: 1px;
+}
+
+.current-hours {
+    font-size: 48px;
+}
+
+.previous-hours time {
+    font-size: 14px;
+    color: hsla(234, 100%, 92%, 0.671);
+    font-weight: 400;
+}
+
+/* ----------------- Background cards ----------------- */
+
+.work {
+    background-image: url('images/icon-work.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+    background-image: url('images/icon-play.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+    background-image: url('images/icon-study.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+    background-image: url('images/icon-exercise.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+    background-image: url('images/icon-social.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(264, 64%, 52%);
+}
+
+.selfCare {
+    background-image: url('images/icon-self-care.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 15px;
+    background-color: hsl(43, 84%, 65%);
+}
+
+/* ]]]]]]]]]]]]]]]]]]]] Attributions [[[[[[[[[[[[[[[[[[[[[ */
+
+.attribution {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    background-color: hsl(260, 7%, 16%);
+    padding: 10px;
+    border-radius: 10px;
+    border: .5px solid hsl(261, 98%, 55%)
+}
+
+/* .attribution::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 12px;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        hsl(261, 98%, 55%),
+        transparent
+    );
+    animation: border-beam 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes border-beam {
+    to { transform: rotate(360deg); }
+} */
+
+/* ||||||||||||||||||||||| Scrollbar Styles ||||||||||||||||||||||| */
+
+body {
+    --sb-track-color: #232433;
+    --sb-thumb-color: #826baf;
+    --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 4px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+/* °°°°°°°°°°°°°°°°°°°°° Media Query Mobile °°°°°°°°°°°°°°°°°°°°° */
+
+@media (max-width: 375px) {
+
+    /* Body */
+    body {
+        padding-top: 6vh;
+        justify-content: center;
+    }
+
+    /* Main */
+    main {
+        max-width: none;
+        width: 38vh;
+        grid-template-columns: 1fr;
+    }
+
+    /* Profile card */
+    .mainCard {
+        max-width: none;
+        height: 30rem;
+    }
+    nav {
+        grid-template-columns: .5fr .5fr .5fr;
+        justify-content: center;
+    };
+
+    /* Activities card */
+
+    .activities {
+        grid-template-columns: 1fr;
+    }
 }
