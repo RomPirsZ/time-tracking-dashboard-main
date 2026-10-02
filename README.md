@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: <!-- TODO: enlace al repo -->
-- Live Site URL: <!-- TODO: enlace al deploy (GitHub Pages / Vercel / Netlify) -->
+- Solution URL: [Solution](https://github.com/RomPirsZ/time-tracking-dashboard-main)
+- Live Site URL: [time-tracking-dashboard](https://rompirsz.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
